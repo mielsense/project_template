@@ -1,0 +1,9 @@
+
+executable_name
+
+navy.dSYM/
+.idea/
+.DS_Store
+
+*.a
+ressources/
