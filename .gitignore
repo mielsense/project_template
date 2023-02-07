@@ -1,9 +1,9 @@
 
 executable_name
+executable_name.dSYM/
 
-navy.dSYM/
 .idea/
 .DS_Store
 
 *.a
-ressources/
+#ressources/
