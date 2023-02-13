@@ -29,7 +29,6 @@
     char *my_strncat(char *dest, char *src, int nb);
     char *my_revstr(char *str);
     int my_strcmp(char const *s1, char const *s2);
-    char **my_str_to_word_array(char const *str);
     int my_str_is_num(const char *str);
 
 #endif //LIB_H
