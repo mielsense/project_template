@@ -30,7 +30,7 @@ char **my_str_to_word_array(char *str, char seperator)
     char **array = malloc(sizeof(char *) * (nb_words + 1));
 
     for (int i = 0; i < nb_words; i++) {
-        while (str[nb_chars] != ' ' && str[nb_chars] != '\0')
+        while (str[nb_chars] != seperator && str[nb_chars] != '\0')
             nb_chars++;
 
         array[i] = malloc(sizeof(char) * (nb_chars + 1));
