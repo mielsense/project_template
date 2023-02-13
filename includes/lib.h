@@ -30,5 +30,6 @@
     char *my_revstr(char *str);
     int my_strcmp(char const *s1, char const *s2);
     int my_str_is_num(const char *str);
+    char **my_str_to_word_array(char *str, char seperator);
 
 #endif //LIB_H

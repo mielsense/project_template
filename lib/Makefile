@@ -17,6 +17,7 @@ SRC = my/my_strlen.c \
 	my/my_strncat.c \
 	my/my_revstr.c \
 	my/my_isnum.c \
+	my/my_str_to_word_array.c \
 	my/my_error_output.c \
 	printf/my_printf.c \
 	printf/my_putdouble.c \
