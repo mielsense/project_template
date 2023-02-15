@@ -11,8 +11,10 @@ int my_getnbr(char *str)
     int sign = 1;
     int nb = 0;
 
-    if (str[i] == '-')
+    if (str[i] == '-') {
         sign = -sign;
+        i++;
+    }
 
     while (str[i] != '\0') {
         if (str[i] >= '0' && str[i] <= '9') {
