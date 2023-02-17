@@ -9,6 +9,7 @@ SRC = my/my_strlen.c \
 	my/my_putchar.c \
 	my/my_put_nbr.c \
 	my/my_strcmp.c \
+	my/my_strncmp.c \
 	my/my_putstr.c \
 	my/my_getnbr.c \
 	my/my_strcpy.c \
