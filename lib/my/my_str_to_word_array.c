@@ -6,41 +6,69 @@
 */
 
 #include <stdlib.h>
+#include <string.h>
 
-char *my_strncpy(char *dest, char const *src, int n);
-
-int count_words(const char *str, char seperator)
+int count_words(char *str, char sep)
 {
-    int is_seperator = 0;
-    int count = 0;
+    int words = 0;
+    int in_word = 0;
 
     for (int i = 0; str[i] != '\0'; i++) {
-        if (is_seperator == 0 && str[i] != seperator)
-            count++;
-        is_seperator = (str[i] == seperator) ? (0) : (1);
+        if (in_word == 0 && str[i] != sep) {
+            words++;
+            in_word = 1;
+        }
+        if (str[i] == sep && in_word == 1)
+            in_word = 0;
     }
-    return count;
+    return words;
 }
 
-char **my_str_to_word_array(char *str, char seperator)
+int word_length(char *str, int index, char sep)
 {
-    int nb_words = count_words(str, seperator);
-    int nb_chars = 0;
+    int i = index;
+    int len;
 
-    char **array = malloc(sizeof(char *) * (nb_words + 1));
+    while (str[i] != '\0' && str[i] != sep)
+        i++;
+    len = i - index;
 
-    for (int i = 0; i < nb_words; i++) {
-        while (str[nb_chars] != seperator && str[nb_chars] != '\0')
-            nb_chars++;
+    return len;
+}
 
-        array[i] = malloc(sizeof(char) * (nb_chars + 1));
-        my_strncpy(array[i], str, nb_chars);
-        str += nb_chars;
+char **verify_res(char **output)
+{
+    int i = 0;
 
-        while (str[0] == seperator)
-            str++;
-        nb_chars = 0;
+    while (output[i] != NULL) {
+        if (output[i][0] == output[i][1])
+            output[i]++;
+        i++;
     }
-    array[nb_words] = NULL;
-    return (array);
+
+    return output;
+}
+
+char **my_str_to_word_array(char *str, char sep)
+{
+    char **output = malloc(sizeof(char *) * (count_words(str, sep) + 10));
+    int in_word = 0, k = 0, j = -1;
+
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (in_word == 0 && str[i] != sep) {
+            in_word = 1, k = 1;
+            j++;
+            output[j] = malloc(sizeof(char) * (word_length(str, i, sep) + 1));
+            output[j][k - 1] = str[i];
+        }
+        if (in_word != 0 && str[i] != sep) {
+            output[j][k] = str[i];
+            output[j][k + 1] = NULL;
+            k++;
+        }
+        output[j][k] = (in_word && str[i] == sep) ? '\0' : output[j][k];
+        in_word = (in_word && str[i] == sep) ? 0 : in_word;
+    }
+    output[count_words(str, sep)] = NULL;
+    return verify_res(output);
 }

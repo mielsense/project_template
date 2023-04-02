@@ -7,3 +7,5 @@ executable_name.dSYM/
 
 *.a
 #ressources/
+kettle.json
+kettle

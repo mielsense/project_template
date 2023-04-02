@@ -5,24 +5,18 @@
 ** task02, pool day 7
 */
 
-int strlen2(char *dest)
-{
-    int i = 0;
-    while (dest[i]) {
-        i++;
-    }
-    return i;
-}
-
 char *my_strcat(char *dest, char const *src)
 {
-    int i = 0;
-    int len = strlen2(dest);
+    int counter;
+    int end_of_dest;
 
-    while (src[i]) {
-        dest[len + i] = src[i];
-        i++;
+    end_of_dest = 0;
+    counter = 0;
+    while (dest[end_of_dest] != '\0')
+        end_of_dest++;
+    while (src[counter] != '\0') {
+        dest[end_of_dest + counter] = src[counter];
+        counter++;
     }
-    dest[len + i] = '\0';
     return dest;
 }

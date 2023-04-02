@@ -31,6 +31,8 @@
     int my_strcmp(char const *s1, char const *s2);
     int my_strncmp(char *s1, char *s2, int n);
     int my_str_is_num(const char *str);
+    int my_is_alpha_num(char c);
+    int my_str_is_alpha_num(char *str);
     char **my_str_to_word_array(char *str, char seperator);
 
 #endif //LIB_H
