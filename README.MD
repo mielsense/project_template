@@ -1,4 +1,4 @@
-# Mini C library
+# EPITECH project template
 > EPITECH project template,
 > contains a Makefile, basic C lib, includes and project structure i like to use
 
