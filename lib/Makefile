@@ -5,22 +5,24 @@
 ## Makfile for the lib
 ##
 
-SRC = my/my_strlen.c \
-	my/my_putchar.c \
-	my/my_put_nbr.c \
-	my/my_strcmp.c \
-	my/my_strncmp.c \
-	my/my_putstr.c \
-	my/my_getnbr.c \
-	my/my_strcpy.c \
-	my/my_strcat.c \
-	my/my_strncpy.c \
-	my/my_strncat.c \
-	my/my_revstr.c \
-	my/my_isnum.c \
-	my/my_is_alpha_num.c \
-	my/my_str_to_word_array.c \
-	my/my_error_output.c \
+SRC = my/getters/my_strlen.c \
+	my/printing/my_putchar.c \
+	my/printing/my_put_nbr.c \
+	my/string/my_strcmp.c \
+	my/string/my_strncmp.c \
+	my/printing/my_putstr.c \
+	my/getters/my_getnbr.c \
+	my/string/my_strcpy.c \
+	my/string/my_strcat.c \
+	my/string/my_strncpy.c \
+	my/string/my_strncat.c \
+	my/string/my_strdup.c \
+	my/string/my_strndup.c \
+	my/string/my_revstr.c \
+	my/checkers/my_isnum.c \
+	my/checkers/my_is_alpha_num.c \
+	my/string/my_str_to_word_array.c \
+	my/printing/my_error_output.c \
 	printf/my_printf.c \
 	printf/my_putdouble.c \
 	printf/my_putlong.c \

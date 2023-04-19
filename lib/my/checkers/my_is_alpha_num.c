@@ -5,7 +5,7 @@
 ** TODO: add description
 */
 
-#include "../../includes/lib.h"
+#include "../../../includes/lib.h"
 
 int my_is_alpha_num(char c)
 {
