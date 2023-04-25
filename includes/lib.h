@@ -18,7 +18,7 @@
     // getters prototypes
 
         int my_getnbr(char const *str);
-        int my_strlen(char const *str);
+        size_t my_strlen(char const *str);
 
     // checkers prototypes
 
@@ -59,5 +59,9 @@
         // random functions prototypes
             char *my_revstr(char *str);
             char **my_str_to_word_array(char *str, char seperator);
+            char *mu_strtrim(char const *s);
+
+    // file functions prototypes
+        int fline(const int fd, char **line);
 
 #endif //LIB_H

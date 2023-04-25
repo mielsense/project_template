@@ -19,7 +19,9 @@ SRC = my/getters/my_strlen.c \
 	my/string/my_strdup.c \
 	my/string/my_strndup.c \
 	my/string/my_revstr.c \
+	my/string/my_strtrim.c \
 	my/checkers/my_isnum.c \
+	my/file/fline.c \
 	my/checkers/my_is_alpha_num.c \
 	my/string/my_str_to_word_array.c \
 	my/printing/my_error_output.c \
