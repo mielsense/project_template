@@ -22,9 +22,13 @@
 
     // checkers prototypes
 
-        int my_str_is_num(const char *str);
-        int my_is_alpha_num(char c);
-        int my_str_is_alpha_num(char *str);
+        int my_str_isascii(const char *str);
+        int my_str_isalpha(const char *str);
+        int my_str_isnum(const char *str);
+        int is_num(const char c);
+        int is_alpha(const char c);
+        int is_ascii(const char c);
+        int my_grep(const char *pattern, const char src);
 
     // print fucntions prototypes
 
@@ -59,9 +63,12 @@
         // random functions prototypes
             char *my_revstr(char *str);
             char **my_str_to_word_array(char *str, char seperator);
+            int sparse(char *str, char *format, ...);
             char *mu_strtrim(char const *s);
 
     // file functions prototypes
         int fline(const int fd, char **line);
+        int my_fopen(const char *filepath, const char accesmode);
+        int my_fclose(int file);
 
 #endif //LIB_H

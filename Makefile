@@ -7,7 +7,14 @@
 
 NAME = executable_name
 
-SRC	= $(wildcard *.c) $(wildcard src/*.c)
+SRC = src/main.c \
+      src/algo/handler.c \
+      src/errors/handler.c \
+      src/errors/errors.c \
+      src/utils/init.c \
+      src/utils/getters.c \
+      src/utils/utils.c \
+      src/utils/free.c
 
 OBJ = $(SRC:.c=.o)
 .SILENT:$(OBJ)
