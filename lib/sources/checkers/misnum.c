@@ -10,7 +10,7 @@ int is_num(const char c)
     return (c >= '0' && c <= '9');
 }
 
-int mstr_is_num(const char *str)
+int mstr_isnum(const char *str)
 {
     int i = 0;
 

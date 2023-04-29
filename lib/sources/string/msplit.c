@@ -45,7 +45,7 @@ char *get_word(char *line, char delim)
     return mstrndup(line, i);
 }
 
-char **mysplit(char *line, char delim)
+char **msplit(char *line, char delim)
 {
     size_t i = 0;
     size_t nb_word = 0;
