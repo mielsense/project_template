@@ -41,7 +41,7 @@
         // int
             int mput_nbr(int nb);
         // all
-            int mprintf(const char *str, ...);
+            void mprintf(const char *format, ...);
 
     // str functions prototypes
 

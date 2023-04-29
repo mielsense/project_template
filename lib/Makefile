@@ -29,15 +29,7 @@ SRC = sources/getters/mstrlen.c \
 	sources/string/msplit.c \
 	sources/string/msscanf.c \
 	sources/printing/merror.c \
-	printf/mprintf.c \
-	printf/mputdouble.c \
-	printf/mputlong.c \
-	printf/moctal.c \
-	printf/mhigh_hexa.c \
-	printf/mlow_hexa.c \
-	printf/mputptr.c \
-	printf/mbinary.c \
-	printf/mnonprintable_char.c
+	sources/printing/mprintf.c
 
 OBJ = $(SRC:.c=.o)
 .SILENT:$(OBJ)
