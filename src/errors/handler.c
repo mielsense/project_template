@@ -11,7 +11,7 @@
 int error_handler(int state)
 {
     switch (state) {
-        case 1: return(start_errors());
+        case 1: return start_errors();
         default: return 0;
     }
 }
