@@ -1,11 +1,14 @@
-
+# program files
 executable_name
-executable_name.dSYM/
 
-.idea/
+# mac files
+*.dSYM/
 .DS_Store
 
+# unecessary files
 *.a
-#ressources/
+*.o
+
+#ressources
 kettle.json
-kettle
+ressources/
