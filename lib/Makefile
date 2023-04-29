@@ -22,7 +22,7 @@ SRC = sources/getters/mstrlen.c \
 	sources/string/mstrtrim.c \
 	sources/checkers/misnum.c \
 	sources/checkers/misascii.c \
-	sources/file/mfgets.c \
+	sources/getters/mgetline.c \
 	sources/file/mffile.c \
 	sources/checkers/misalpha.c \
 	sources/checkers/mgrep.c \

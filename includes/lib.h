@@ -19,6 +19,7 @@
 
         int matoi(char const *str);
         size_t mstrlen(char const *str);
+        int mgetline(const int fd, char **line);
 
     // checkers prototypes
 
@@ -67,7 +68,6 @@
             char *mstrtrim(char const *s);
 
     // file functions prototypes
-        int mfgets(const int fd, char **line);
         int mfopen(const char *filepath, const char accesmode);
         int mfclose(int file);
 

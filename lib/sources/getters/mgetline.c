@@ -39,7 +39,7 @@ void free_line(file_t *f, int i)
             free(((f->b[f->k] = f->t[f->k]) && (f->k + 1 < i) ? 0 : f->t));
 }
 
-int mfgets(const int fd, char **line)
+int mgetline(const int fd, char **line)
 {
     static file_t *openfiles;
     file_t *f;
