@@ -5,43 +5,44 @@
 ## Makfile for the lib
 ##
 
-SRC = my/getters/my_strlen.c \
-	my/printing/my_putchar.c \
-	my/printing/my_put_nbr.c \
-	my/string/my_strcmp.c \
-	my/string/my_strncmp.c \
-	my/printing/my_putstr.c \
-	my/getters/my_getnbr.c \
-	my/string/my_strcpy.c \
-	my/string/my_strcat.c \
-	my/string/my_strncpy.c \
-	my/string/my_strncat.c \
-	my/string/my_strdup.c \
-	my/string/my_strndup.c \
-	my/string/my_revstr.c \
-	my/string/my_strtrim.c \
-	my/checkers/my_isnum.c \
-	my/checkers/my_isascii.c \
-	my/file/fline.c \
-	my/file/futils.c \
-	my/checkers/my_isalpha.c \
-	my/checkers/my_grep.c \
-	my/string/my_str_to_word_array.c \
-	my/printing/my_error_output.c \
-	printf/my_printf.c \
-	printf/my_putdouble.c \
-	printf/my_putlong.c \
-	printf/my_octal.c \
-	printf/my_high_hexa.c \
-	printf/my_low_hexa.c \
-	printf/my_putptr.c \
-	printf/my_binary.c \
-	printf/my_nonprintable_char.c
+SRC = sources/getters/mstrlen.c \
+	sources/printing/mputchar.c \
+	sources/printing/mput_nbr.c \
+	sources/string/mstrcmp.c \
+	sources/string/mstrncmp.c \
+	sources/printing/mputstr.c \
+	sources/getters/matoi.c \
+	sources/string/mstrcpy.c \
+	sources/string/mstrcat.c \
+	sources/string/mstrncpy.c \
+	sources/string/mstrncat.c \
+	sources/string/mstrdup.c \
+	sources/string/mstrndup.c \
+	sources/string/mrevstr.c \
+	sources/string/mstrtrim.c \
+	sources/checkers/misnum.c \
+	sources/checkers/misascii.c \
+	sources/file/mfgets.c \
+	sources/file/mffile.c \
+	sources/checkers/misalpha.c \
+	sources/checkers/mgrep.c \
+	sources/string/msplit.c \
+	sources/string/msscanf.c \
+	sources/printing/merror.c \
+	printf/mprintf.c \
+	printf/mputdouble.c \
+	printf/mputlong.c \
+	printf/moctal.c \
+	printf/mhigh_hexa.c \
+	printf/mlow_hexa.c \
+	printf/mputptr.c \
+	printf/mbinary.c \
+	printf/mnonprintable_char.c
 
 OBJ = $(SRC:.c=.o)
 .SILENT:$(OBJ)
 
-NAME_LIB = libmy.a
+NAME_LIB = libm.a
 
 all: $(NAME_LIB)
 

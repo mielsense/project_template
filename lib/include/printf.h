@@ -12,20 +12,20 @@
     #include <unistd.h>
     #include <stdlib.h>
 
-    int my_put_nbr(int nb);
-    void my_putchar(char c);
-    int my_putstr(char const *str);
-    int my_strlen(char const *str);
-    int	my_putdouble(int n);
-    long my_putlong(long n);
-    void my_binary(int n);
-    void my_octal(int n);
-    void my_high_hexa(int n);
-    void my_low_hexa(int n);
-    void my_putptr(int n);
-    int my_error_output(char const *str);
+    int mput_nbr(int nb);
+    void mputchar(char c);
+    int mputstr(char const *str);
+    int mstrlen(char const *str);
+    int mputdouble(int n);
+    long mputlong(long n);
+    void mbinary(int n);
+    void moctal(int n);
+    void mhigh_hexa(int n);
+    void mlow_hexa(int n);
+    void mputptr(int n);
+    int merror(char const *str);
     void error_print(char c);
-    void my_nonprintable_char(char const *str);
+    void mnonprintable_char(char const *str);
     void convert_char(char c);
     void hashtag_format(const char *format, va_list args, int i);
     void void_format(const char *format, va_list args, int i);

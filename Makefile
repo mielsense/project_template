@@ -7,21 +7,21 @@
 
 NAME = executable_name
 
-SRC = src/main.c \
-      src/algo/handler.c \
-      src/errors/handler.c \
-      src/errors/errors.c \
-      src/utils/init.c \
-      src/utils/getters.c \
-      src/utils/utils.c \
-      src/utils/free.c
+SRC = sources/main.c \
+      sources/algo/handler.c \
+      sources/errors/handler.c \
+      sources/errors/errors.c \
+      sources/utils/init.c \
+      sources/utils/getters.c \
+      sources/utils/utils.c \
+      sources/utils/free.c
 
 OBJ = $(SRC:.c=.o)
 .SILENT:$(OBJ)
 
 CFLAGS = -W -Wall -Wextra -g3
 
-LIBFLAGS = -L./lib -lmy
+LIBFLAGS = -L./lib -lm
 
 all: $(NAME)
 
