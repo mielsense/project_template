@@ -15,6 +15,10 @@
     #include <fcntl.h>
     #include <sys/stat.h>
 
+    typedef struct s_file {
+        int fd;
+    } t_file;
+
     // getters prototypes
 
         int matoi(char const *str);
@@ -68,7 +72,9 @@
             char *mstrtrim(char const *s);
 
     // file functions prototypes
-        int mfopen(const char *filepath, const char accesmode);
-        int mfclose(int file);
+    ssize_t mfwrite(const void *ptr, size_t size, size_t count, t_file *file);
+        ssize_t mfread(void *ptr, size_t size, size_t count, t_file *file);
+        t_file *mfopen(const char *filename, const char *mode);
+        int mfclose(t_file *file);
 
 #endif //LIB_H
