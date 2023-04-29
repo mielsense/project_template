@@ -55,7 +55,7 @@ static void parse_format(const char **format, va_list *args, mprintf_t *buf)
         case 's':
             print_str(buf, va_arg(*args, const char *));
             break;
-
+        case 'i':
         case 'd':
             print_dec(buf, va_arg(*args, int32_t));
             break;
