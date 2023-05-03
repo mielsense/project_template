@@ -23,12 +23,14 @@ SRC = sources/getters/mstrlen.c \
 	sources/checkers/misnum.c \
 	sources/checkers/misascii.c \
 	sources/getters/mgetline.c \
+	sources/getters/mgetsize.c \
 	sources/file/mffile.c \
 	sources/checkers/misalpha.c \
 	sources/checkers/mgrep.c \
 	sources/string/msplit.c \
 	sources/string/msscanf.c \
 	sources/printing/merror.c \
+	sources/printing/mdisplay.c \
 	sources/printing/mprintf.c
 
 OBJ = $(SRC:.c=.o)

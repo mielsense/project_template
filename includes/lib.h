@@ -24,6 +24,8 @@
         int matoi(char const *str);
         size_t mstrlen(char const *str);
         int mgetline(const int fd, char **line);
+        int mgetsize(char *filepath);
+        int mgetlen(char **arr);
 
     // checkers prototypes
 
@@ -37,6 +39,8 @@
 
     // print fucntions prototypes
 
+        // array
+            void mdarray(char **array);
         // string
             int mputstr(char const *str);
             int merror(char const *str);
