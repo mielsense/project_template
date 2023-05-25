@@ -34,6 +34,7 @@ SRC = sources/getters/mstrlen.c \
 	sources/string/msplit.c \
 	sources/string/msscanf.c \
 	sources/memory/mmemset.c \
+	sources/memory/mfree.c \
 	sources/printing/merror.c \
 	sources/printing/mdisplay.c \
 	sources/printing/mprintf.c
