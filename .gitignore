@@ -12,3 +12,7 @@ executable_name
 #ressources
 kettle.json
 ressources/
+
+# personal files
+Dockerfile
+launch_shell.sh

@@ -8,77 +8,30 @@
 #ifndef LIB_H
     #define LIB_H
 
-    #include <unistd.h>
-    #include <stdarg.h>
-    #include <stdlib.h>
-    #include <stdio.h>
-    #include <fcntl.h>
-    #include <sys/stat.h>
+    // lib includes
 
-    typedef struct s_file {
-        int fd;
-    } t_file;
+        #include <stdarg.h>
+        #include <stdlib.h>
+        #include <stdio.h>
+        #include <fcntl.h>
+        #include <sys/stat.h>
+        #include <sys/types.h>
+ 
+    // general functions prototypes
 
-    // getters prototypes
+        #include "lib/structs.h"
+        #include "lib/getters.h"
+        #include "lib/checkers.h"
 
-        int matoi(char const *str);
-        size_t mstrlen(char const *str);
-        int mgetline(const int fd, char **line);
-        int mgetsize(char *filepath);
-        int mgetlen(char **arr);
+    // types functions prototypes
 
-    // checkers prototypes
+        #include "lib/file.h"
+        #include "lib/string.h"
+        #include "lib/lists.h"
 
-        int mstr_isascii(const char *str);
-        int mstr_isalpha(const char *str);
-        int mstr_isnum(const char *str);
-        int is_num(const char c);
-        int is_alpha(const char c);
-        int is_ascii(const char c);
-        int mgrep(const char *pattern, const char src);
+    // utils functions prototypes
 
-    // print fucntions prototypes
-
-        // array
-            void mdarray(char **array);
-        // string
-            int mputstr(char const *str);
-            int merror(char const *str);
-        // char
-            void mputchar(char c);
-        // int
-            int mput_nbr(int nb);
-        // all
-            void mprintf(const char *format, ...);
-
-    // str functions prototypes
-
-        // copy functions prototypes
-            char *mstrcpy(char *dest, char const *src);
-            char *mstrncpy(char *dest, char const *src, int n);
-
-        // cat functions prototypes
-            char *mstrcat(char *dest, char *src);
-            char *mstrncat(char *dest, char *src, int nb);
-
-        // dup functions prototypes
-            char *mstrdup(char const *src);
-            char *mstrndup(char *src, int len);
-
-        // compare functions prototypes
-            int mstrcmp(char const *s1, char const *s2);
-            int mstrncmp(char *s1, char *s2, int n);
-
-        // random functions prototypes
-            char *mrevstr(char *str);
-            char **msplit(char *str, char seperator);
-            int msscanf(const char *str, const char *format, ...);
-            char *mstrtrim(char const *s);
-
-    // file functions prototypes
-    ssize_t mfwrite(const void *ptr, size_t size, size_t count, t_file *file);
-        ssize_t mfread(void *ptr, size_t size, size_t count, t_file *file);
-        t_file *mfopen(const char *filename, const char *mode);
-        int mfclose(t_file *file);
+        #include "lib/memory.h"
+        #include "lib/printing.h"
 
 #endif //LIB_H

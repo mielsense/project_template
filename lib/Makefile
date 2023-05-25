@@ -20,15 +20,20 @@ SRC = sources/getters/mstrlen.c \
 	sources/string/mstrndup.c \
 	sources/string/mrevstr.c \
 	sources/string/mstrtrim.c \
+	sources/lists/mlistconvert.c \
+	sources/lists/mlistgetters.c \
+	sources/lists/mlistutils.c \
 	sources/checkers/misnum.c \
 	sources/checkers/misascii.c \
 	sources/getters/mgetline.c \
 	sources/getters/mgetsize.c \
+	sources/getters/mcopy.c \
 	sources/file/mffile.c \
 	sources/checkers/misalpha.c \
 	sources/checkers/mgrep.c \
 	sources/string/msplit.c \
 	sources/string/msscanf.c \
+	sources/memory/mmemset.c \
 	sources/printing/merror.c \
 	sources/printing/mdisplay.c \
 	sources/printing/mprintf.c

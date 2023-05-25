@@ -21,7 +21,6 @@
         void free_array(char **array, int size);
 
     // errors
-        int error_handler(int state);
         int start_errors(void);
 
 #endif //PROJECT_NAME_H

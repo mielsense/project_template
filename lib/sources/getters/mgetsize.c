@@ -13,6 +13,7 @@ int mgetsize(char *filepath)
     char *buff;
     int line_nb;
 
+    line_nb = 0;
     file = mfopen(filepath, "r");
     if (file == NULL) {
         merror("Unable to open file\n");

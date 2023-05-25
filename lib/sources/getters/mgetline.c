@@ -5,24 +5,9 @@
 ** vim users are the way
 */
 
-#define BUFF_SIZE 1024
+#include "../../../includes/lib.h"
 
-#include <unistd.h>
-#include <stdlib.h>
-
-typedef struct file_s {
-    int d;
-    int s;
-    char *b;
-    char *t;
-    char r[BUFF_SIZE];
-    int i;
-    int j;
-    int k;
-    struct file_s *n;
-} file_t;
-
-int check_error(file_t *f, int i)
+int check_error(t_getfile *f, int i)
 {
     if (i + BUFF_SIZE >= f->s && ((!f->b && ((f->b = f->t) || 1))
     || !(f->s = i + BUFF_SIZE + 1)))
@@ -31,7 +16,7 @@ int check_error(file_t *f, int i)
     return 0;
 }
 
-void free_line(file_t *f, int i)
+void free_line(t_getfile *f, int i)
 {
     if (i + BUFF_SIZE >= f->s && (f->k -= 1) && ((f->t = f->b) || 1)
     && (f->b = (char *)malloc(sizeof(char) * (i + BUFF_SIZE + 1))))
@@ -41,8 +26,8 @@ void free_line(file_t *f, int i)
 
 int mgetline(const int fd, char **line)
 {
-    static file_t *openfiles;
-    file_t *f;
+    static t_getfile *openfiles;
+    t_getfile *f;
     int i;
 
     f = openfiles;

@@ -9,7 +9,6 @@ NAME = executable_name
 
 SRC = sources/main.c \
       sources/algo/handler.c \
-      sources/errors/handler.c \
       sources/errors/errors.c \
       sources/utils/init.c \
       sources/utils/getters.c \

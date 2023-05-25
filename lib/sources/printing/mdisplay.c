@@ -7,13 +7,12 @@
 
 #include "../../../includes/lib.h"
 
-int mgetlen(char **arr)
+size_t mgetlen(char **arr)
 {
-    int res = 0;
+    size_t res = 0;
 
-    while (*arr) {
+    while (*arr++) {
         res++;
-        arr++;
     }
 
     return res;
@@ -22,8 +21,9 @@ int mgetlen(char **arr)
 void mdarray(char **array)
 {
     int i = 0;
-    int len = mgetlen(array);
+    int len = 0;
 
+    len = mgetlen(array);
     while (i < len) {
         mprintf("%s\n", array[i]);
         i++;
