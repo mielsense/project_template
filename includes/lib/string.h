@@ -30,6 +30,7 @@
             char *mrevstr(char *str);
             char **msplit(char *str, char seperator);
             int msscanf(const char *str, const char *format, ...);
+            char *mclean(char *str);
             char *mstrtrim(char const *s);
 
 #endif //STRING_H

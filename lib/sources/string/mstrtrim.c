@@ -53,3 +53,19 @@ char *mstrtrim(char const *s)
 
     return form_string(s, i, len);
 }
+
+char *mclean(char *str)
+{
+    int i = 0;
+    int j = 0;
+
+    str = mstrtrim(str);
+
+    for (; str[i] != '\0'; i++) {
+        if (str[i] != '\t' && str[i] != '\\')
+            str[j++] = str[i];
+    }
+    str[j] = '\0';
+
+    return str;
+}
